@@ -22,6 +22,7 @@
         <activity android:name=".activities.TeamsActivity"></activity>
         <activity android:name=".activities.PlayerActivity"></activity>
         <activity android:name=".activities.Gamesctivity"></activity>
+        <activity android:name=".activities.StatisticsActivity"></activity>
     </application>
 
 </manifest>

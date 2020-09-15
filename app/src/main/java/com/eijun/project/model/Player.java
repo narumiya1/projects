@@ -16,11 +16,15 @@ public class Player {
     @SerializedName("position")
     private String position;
 
-    public Player(String id, String first_name, String last_name, String position) {
+    @SerializedName("team")
+    private Team teamz;
+
+    public Player(String id, String first_name, String last_name, String position, Team team) {
         this.id = id;
         this.first_name = first_name;
         this.last_name = last_name;
         this.position = position;
+        this.teamz = team ;
     }
 
     public String getId() {
@@ -53,5 +57,9 @@ public class Player {
 
     public void setPosition(String position) {
         this.position = position;
+    }
+
+    public Team getTeamz() {
+        return teamz;
     }
 }

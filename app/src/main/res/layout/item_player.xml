@@ -60,11 +60,11 @@
                 android:text="Lastn Name" />
 
             <TextView
-                android:id="@+id/city"
+                android:id="@+id/team"
+                android:layout_marginTop="5dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="City"
-                android:visibility="invisible" />
+                android:text="Team" />
 
 
         </LinearLayout>

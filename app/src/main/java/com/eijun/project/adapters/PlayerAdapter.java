@@ -38,7 +38,9 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
         holder.id_player.setText(playerMode.getId());
         holder.firstname.setText(playerMode.getFirst_name());
         holder.lastname.setText(playerMode.getLast_name());
+        holder.team.setText(playerMode.getTeamz().getFullName());
         holder.position.setText(playerMode.getPosition());
+
         holder.mainView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -53,13 +55,14 @@ public class PlayerAdapter extends RecyclerView.Adapter<PlayerAdapter.ViewHolder
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView id_player,firstname,lastname,position;
+        public TextView id_player,firstname,lastname,position, team;
         public View mainView ;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             mainView = itemView ;
             id_player=itemView.findViewById(R.id.id_player);
+            team = itemView.findViewById(R.id.team);
             firstname=itemView.findViewById(R.id.first_name);
             lastname=itemView.findViewById(R.id.last_name);
             position=itemView.findViewById(R.id.position);

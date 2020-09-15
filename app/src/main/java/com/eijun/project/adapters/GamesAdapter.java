@@ -38,8 +38,8 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder>{
         holder.id_game.setText(gameMode.getId());
         holder.home_team_score.setText(gameMode.getHome_team_score());
         holder.away_team_score.setText(gameMode.getAway_team_score());
-        holder.home_team_name.setText(gameMode.getHome_team().getName());
-        holder.away_team_name.setText(gameMode.getVisitor_team().getName());
+        holder.home_team_name.setText(gameMode.getHome_team().getFullName());
+        holder.away_team_name.setText(gameMode.getVisitor_team().getFullName());
         holder.mainView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

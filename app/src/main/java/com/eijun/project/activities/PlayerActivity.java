@@ -23,6 +23,8 @@ import com.eijun.project.adapters.TeamsAdapter;
 import com.eijun.project.data.Contans;
 import com.eijun.project.model.DataItemTeam;
 import com.eijun.project.model.Player;
+import com.eijun.project.model.Team;
+import com.google.gson.JsonObject;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -107,6 +109,9 @@ public class PlayerActivity extends AppCompatActivity {
                             JSONArray jsonArray = response.getJSONArray("data");
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject player = jsonArray.getJSONObject(i);
+
+                                JSONObject playerTeam = player.getJSONObject("team");
+
                                 String playerName = player.getString("last_name");
 
 
@@ -116,8 +121,17 @@ public class PlayerActivity extends AppCompatActivity {
                                             player.getString("id"),
                                             player.getString("first_name"),
                                             player.getString("last_name"),
-                                            player.getString("position")
-                                    );
+                                            player.getString("position"),
+
+                                            new Team(
+                                                    playerTeam.getString("division"),
+                                                    playerTeam.getString("conference"),
+                                                    playerTeam.getString("full_name"),
+                                                    playerTeam.getString("city"),
+                                                    playerTeam.getString("name"),
+                                                    playerTeam.getInt("id"),
+                                                    playerTeam.getString("abbreviation"))
+                                            );
 
                                     playersModel.add(playerModel);
                                 } else if (searchWord.equals("")) {
@@ -126,7 +140,15 @@ public class PlayerActivity extends AppCompatActivity {
                                             player.getString("id"),
                                             player.getString("first_name"),
                                             player.getString("last_name"),
-                                            player.getString("position")
+                                            player.getString("position"),
+                                            new Team(
+                                                    playerTeam.getString("division"),
+                                                    playerTeam.getString("conference"),
+                                                    playerTeam.getString("full_name"),
+                                                    playerTeam.getString("city"),
+                                                    playerTeam.getString("name"),
+                                                    playerTeam.getInt("id"),
+                                                    playerTeam.getString("abbreviation"))
                                     );
 
                                     playersModel.add(playerModel);
