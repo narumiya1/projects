@@ -40,6 +40,8 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder>{
         holder.away_team_score.setText(gameMode.getAway_team_score());
         holder.home_team_name.setText(gameMode.getHome_team().getFullName());
         holder.away_team_name.setText(gameMode.getVisitor_team().getFullName());
+        holder.status.setText(gameMode.getStatus());
+        holder.season.setText(gameMode.getDate());
         holder.mainView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,7 +56,7 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder>{
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView id_game,home_team_score,away_team_score, home_team_name, away_team_name;
+        public TextView id_game,home_team_score,away_team_score, home_team_name, away_team_name, season, status;
         public View mainView ;
 
         public ViewHolder(@NonNull View itemView) {
@@ -66,6 +68,9 @@ public class GamesAdapter extends RecyclerView.Adapter<GamesAdapter.ViewHolder>{
 
             home_team_name=itemView.findViewById(R.id.home_team_name);
             away_team_name=itemView.findViewById(R.id.away_team_name);
+
+            season=itemView.findViewById(R.id.season);
+            status=itemView.findViewById(R.id.status);
 
 
         }

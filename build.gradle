@@ -32,7 +32,8 @@ allprojects {
         maven { url "https://jitpack.io" }
         maven {
             name 'Sonatype SNAPSHOTs';
-            url "https://oss.sonatype.org/content/repositories/snapshots" }
+            url "https://oss.sonatype.org/content/repositories/snapshots"
+        }
     }
 
 

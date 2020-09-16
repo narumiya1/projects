@@ -1,6 +1,9 @@
 package com.eijun.project.activities;
 
 import android.os.Bundle;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,13 +16,8 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
 import com.eijun.project.R;
-import com.eijun.project.adapters.GamesAdapter;
 import com.eijun.project.adapters.StatisticsAdapter;
 import com.eijun.project.data.Contans;
-import com.eijun.project.model.Games;
-import com.eijun.project.model.HomeTeam;
-import com.eijun.project.model.Statistics;
-import com.eijun.project.model.VisitorTeam;
 import com.eijun.project.model.staats.Game;
 import com.eijun.project.model.staats.Player;
 import com.eijun.project.model.staats.StaatsModel;
@@ -50,11 +48,7 @@ public class StatisticsActivity extends AppCompatActivity {
         recycler.setHasFixedSize(true);
         final LinearLayoutManager layoutManager = new LinearLayoutManager(this);
         recycler.setLayoutManager(layoutManager);
-
-
         requestQueue = Volley.newRequestQueue(this);
-
-
         staatsList();
 
 
@@ -62,7 +56,9 @@ public class StatisticsActivity extends AppCompatActivity {
 
     private void staatsList() {
         statisticsModel = new ArrayList<>();
-        String url = Contans.WEB_URL_TEAM + "stats/?seasons[]=2018&player_ids[]=1/";
+        int season = 2018 ;
+        String player_ids = "&player_ids[]=1";
+        String url = Contans.WEB_URL_TEAM + "stats/?seasons[]="+season+"/";
 
         JsonObjectRequest request2 = new JsonObjectRequest(Request.Method.GET, url, null,
                 new com.android.volley.Response.Listener<JSONObject>() {

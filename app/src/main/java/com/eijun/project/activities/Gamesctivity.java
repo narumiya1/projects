@@ -58,7 +58,7 @@ public class Gamesctivity extends AppCompatActivity {
 
     private void teamList() {
         gamesModel = new ArrayList<>();
-        String url = Contans.WEB_URL_TEAM + "games/";
+        String url = Contans.WEB_URL_TEAM + "games/?per_page=100/";
 
 
         JsonObjectRequest request2 = new JsonObjectRequest(Request.Method.GET, url, null,
@@ -78,6 +78,8 @@ public class Gamesctivity extends AppCompatActivity {
                                         games.getString("id"),
                                         games.getString("home_team_score"),
                                         games.getString("visitor_team_score"),
+                                        games.getString("date"),
+                                        games.getString("status"),
                                         new VisitorTeam(
                                                 visitorTeam.getString("division"),
                                                 visitorTeam.getString("conference"),

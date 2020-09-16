@@ -4,18 +4,14 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.eijun.project.Charts.ChartActivity;
 import com.eijun.project.activities.Gamesctivity;
 import com.eijun.project.activities.PlayerActivity;
 import com.eijun.project.activities.StatisticsActivity;
 import com.eijun.project.activities.TeamsActivity;
-import com.eijun.project.model.DataItemTeam;
-
-import java.util.ArrayList;
-import java.util.List;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -35,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_staats)
     LinearLayout btnStaats;
 
+    @BindView(R.id.btn_any_chart)
+    LinearLayout btnChart;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -44,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_team, R.id.btn_player, R.id.btn_games, R.id.btn_staats})
+    @OnClick({R.id.btn_team, R.id.btn_player, R.id.btn_games, R.id.btn_staats, R.id.btn_any_chart})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_team:
@@ -59,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btn_staats:
                 startActivity(new Intent(MainActivity.this, StatisticsActivity.class));
                 break;
+            case R.id.btn_any_chart:
+                startActivity(new Intent(MainActivity.this, ChartActivity.class));
+                break;
+
         }
     }
 }

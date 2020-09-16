@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.anychart.AnyChartView;
 import com.eijun.project.R;
-import com.eijun.project.model.Statistics;
 import com.eijun.project.model.staats.StaatsModel;
 
 import java.util.List;
@@ -19,6 +19,7 @@ public class StatisticsAdapter extends RecyclerView.Adapter<StatisticsAdapter.Vi
 
     private List<StaatsModel> statisticsModel ;
     private Context context ;
+    AnyChartView acyChart ;
 
     public StatisticsAdapter(List<StaatsModel> statisticsModel, Context context) {
         this.statisticsModel = statisticsModel;
@@ -52,8 +53,8 @@ public class StatisticsAdapter extends RecyclerView.Adapter<StatisticsAdapter.Vi
         holder.fta.setText(statisticsM.getFta());
         holder.ftm.setText(statisticsM.getFtm());
         holder.points.setText(statisticsM.getPts());
-        holder.rebound.setText(statisticsM.getStl());
-        holder.steal.setText(statisticsM.getReb());
+        holder.rebound.setText(statisticsM.getReb());
+        holder.steal.setText(statisticsM.getStl());
         holder.turnover.setText(statisticsM.getTurnover());
 
     }
@@ -76,19 +77,18 @@ public class StatisticsAdapter extends RecyclerView.Adapter<StatisticsAdapter.Vi
             visitor=itemView.findViewById(R.id.visitor_st);
             score_home=itemView.findViewById(R.id.home_score_st);
             score_visitor=itemView.findViewById(R.id.visitor_score_st);
+
             assist=itemView.findViewById(R.id.assist);
             block=itemView.findViewById(R.id.block);
-
             dribble=itemView.findViewById(R.id.dribble);
             fga=itemView.findViewById(R.id.fga);
             fta=itemView.findViewById(R.id.fta);
             ftm=itemView.findViewById(R.id.ftm);
             points=itemView.findViewById(R.id.pointo);
             rebound=itemView.findViewById(R.id.reboundto);
-            points=itemView.findViewById(R.id.pointo);
-            rebound=itemView.findViewById(R.id.reboundto);
             steal=itemView.findViewById(R.id.steal);
             turnover=itemView.findViewById(R.id.turnover);
+
         }
     }
 }

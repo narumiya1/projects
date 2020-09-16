@@ -15,7 +15,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/purple_700"
+        android:background="@color/light_blue_500"
         android:orientation="vertical"
         android:padding="6dp">
 
@@ -70,8 +70,10 @@
             android:layout_height="40dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="8dp"
-            android:background="@color/amber_50"
-            android:orientation="horizontal">
+            android:background="@color/blue_grey_50"
+            android:orientation="horizontal"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white">
 
             <LinearLayout
                 android:layout_width="160dp"
@@ -83,7 +85,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Position : "
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16dp" />
 
                 <TextView
@@ -91,7 +93,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Sixth Man "
-                    android:textColor="@color/purple_700"
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16dp" />
             </LinearLayout>
 
@@ -105,17 +107,18 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Season : "
-                    android:textColor="@color/purple_700"
+                    android:text="View in "
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16dp" />
 
-                <TextView
+                <Button
                     android:id="@+id/season_st"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="2019 "
-                    android:textColor="@color/purple_700"
+                    android:text="Chart "
+                    android:textColor="@color/light_blue_900"
                     android:textSize="16dp" />
+
             </LinearLayout>
 
 
@@ -125,57 +128,23 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
+            android:layout_gravity="center_vertical"
             android:layout_marginTop="8dp"
 
-            android:background="@color/amber_50"
+            android:background="@color/blue_grey_50"
             android:gravity="center_horizontal"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/home_st"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Lakers"
-                android:textColor="@color/purple_700"
-                android:textSize="18dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="  vs "
-                android:textColor="@color/purple_700"
-                android:textSize="16dp" />
-
-            <TextView
-                android:id="@+id/visitor_st"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:text="Chichago"
-                android:textColor="@color/purple_700"
-                android:textSize="18dp" />
-
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="40dp"
-            android:layout_gravity="center_horizontal"
-
-            android:background="@color/amber_50"
-            android:gravity="center_horizontal"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white">
 
             <TextView
                 android:id="@+id/home_score_st"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100"
-                android:textColor="@color/purple_700"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="9dp"
+                android:text="Home Team "
+                android:textColor="@color/light_blue_900"
                 android:textSize="16dp" />
 
             <TextView
@@ -189,11 +158,77 @@
                 android:id="@+id/visitor_score_st"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="100"
-                android:textColor="@color/purple_700"
+                android:layout_gravity="center_vertical"
+                android:text="Visitor Team "
+
+                android:textColor="@color/light_blue_900"
 
                 android:textSize="16dp" />
 
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_gravity="center_vertical"
+            android:background="@color/blue_grey_50"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/home_st"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="60dp"
+                    android:text="100"
+                    android:textColor="@color/light_blue_900"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:text="   "
+                    android:textColor="@color/purple_700"
+                    android:textSize="16dp" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/visitor_st"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="100"
+                android:textColor="@color/light_blue_900"
+                android:textSize="18dp" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:background="@color/blue_grey_50"
+            android:orientation="horizontal"
+            android:outlineAmbientShadowColor="@color/white"
+            android:outlineSpotShadowColor="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:gravity="center_horizontal"
+                android:text="played at : "
+                android:textStyle="italic"
+                android:textColor="@color/light_blue_900"
+                android:textSize="14dp" />
 
         </LinearLayout>
 
@@ -208,8 +243,10 @@
                 android:layout_height="300dp"
 
                 android:layout_marginTop="8dp"
-                android:background="@color/amber_50"
-                android:orientation="vertical">
+                android:background="@color/blue_grey_50"
+                android:orientation="vertical"
+                android:outlineAmbientShadowColor="@color/white"
+                android:outlineSpotShadowColor="@color/white">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -224,7 +261,7 @@
                         android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal"
                         android:text="Statistics / Game"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
 
 
@@ -241,7 +278,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="50dp"
                         android:text="Assist "
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
 
                     <TextView
@@ -251,7 +288,7 @@
                         android:layout_marginRight="40dp"
                         android:gravity="right"
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -266,7 +303,7 @@
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="40dp"
                         android:text="Block "
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
 
                         android:textSize="16dp" />
 
@@ -279,7 +316,7 @@
                         android:gravity="right"
 
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -294,7 +331,7 @@
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="40dp"
                         android:text="Dribble "
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
 
                     <TextView
@@ -305,7 +342,7 @@
                         android:layout_marginRight="40dp"
                         android:gravity="right"
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -320,7 +357,7 @@
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="40dp"
                         android:text="FGA"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
 
 
                         android:textSize="16dp" />
@@ -333,7 +370,7 @@
                         android:layout_marginRight="40dp"
                         android:gravity="right"
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -348,7 +385,7 @@
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="40dp"
                         android:text="FTA "
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
 
                     <TextView
@@ -359,7 +396,7 @@
                         android:layout_marginRight="40dp"
                         android:gravity="right"
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -374,18 +411,17 @@
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="40dp"
                         android:text="FTM"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/ftm"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
                         android:layout_marginRight="40dp"
                         android:gravity="right"
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -400,18 +436,17 @@
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="40dp"
                         android:text="Points "
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/pointo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
                         android:layout_marginRight="40dp"
                         android:gravity="right"
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -426,18 +461,17 @@
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="40dp"
                         android:text="Rebound "
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/reboundto"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
                         android:layout_marginRight="40dp"
                         android:gravity="right"
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -452,18 +486,17 @@
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="40dp"
                         android:text="Steal"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/steal"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
                         android:layout_marginRight="40dp"
                         android:gravity="right"
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
 
@@ -478,18 +511,17 @@
                         android:layout_marginLeft="50dp"
                         android:layout_marginRight="40dp"
                         android:text="Turnover"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
 
                     <TextView
                         android:id="@+id/turnover"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="150dp"
                         android:layout_marginRight="40dp"
                         android:gravity="right"
                         android:text="19"
-                        android:textColor="@color/purple_700"
+                        android:textColor="@color/light_blue_900"
                         android:textSize="16dp" />
                 </LinearLayout>
             </LinearLayout>

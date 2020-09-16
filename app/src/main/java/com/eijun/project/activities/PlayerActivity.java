@@ -77,7 +77,7 @@ public class PlayerActivity extends AppCompatActivity {
         MenuItem searchItem = menu.findItem(R.id.searchView);
 
         mSearchView = (SearchView) MenuItemCompat.getActionView(searchItem);
-        mSearchView.setQueryHint("League...");
+        mSearchView.setQueryHint("Search ...");
         mSearchView.setIconifiedByDefault(true);
         mSearchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
@@ -99,7 +99,7 @@ public class PlayerActivity extends AppCompatActivity {
     private void playerList(final String searchWord) {
 
         playersModel = new ArrayList<>();
-        String url = Contans.WEB_URL_TEAM + "players/";
+        String url = Contans.WEB_URL_TEAM + "players/?per_page=100/";
 
         JsonObjectRequest request2 = new JsonObjectRequest(Request.Method.GET, url, null,
                 new com.android.volley.Response.Listener<JSONObject>() {
