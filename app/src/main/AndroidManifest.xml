@@ -23,7 +23,7 @@
         <activity android:name=".activities.PlayerActivity"></activity>
         <activity android:name=".activities.Gamesctivity"></activity>
         <activity android:name=".activities.StatisticsActivity"></activity>
-        <activity android:name=".Charts.ChartActivity"></activity>
+        <activity android:name=".chart.ChartActivity"></activity>
 
     </application>
 

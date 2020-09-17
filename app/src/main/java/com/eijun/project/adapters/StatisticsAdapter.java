@@ -1,9 +1,11 @@
 package com.eijun.project.adapters;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -11,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.anychart.AnyChartView;
 import com.eijun.project.R;
+import com.eijun.project.chart.ChartActivity;
 import com.eijun.project.model.staats.StaatsModel;
 
 import java.util.List;
@@ -57,6 +60,38 @@ public class StatisticsAdapter extends RecyclerView.Adapter<StatisticsAdapter.Vi
         holder.steal.setText(statisticsM.getStl());
         holder.turnover.setText(statisticsM.getTurnover());
 
+        holder.button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ChartActivity.class);
+                String first = statisticsModel.get(position).getPlayer().getFirstName();
+                intent.putExtra("first", first);
+                String assist = statisticsModel.get(position).getAst();
+                intent.putExtra("assist", assist);
+                String points = statisticsModel.get(position).getPts();
+                intent.putExtra("points", points);
+                String rebound = statisticsModel.get(position).getReb();
+                intent.putExtra("rebound", rebound);
+                String dribble = statisticsModel.get(position).getDreb();
+                intent.putExtra("dribble", dribble);
+                String turnover = statisticsModel.get(position).getTurnover();
+                intent.putExtra("turnover", turnover);
+
+                String fga = statisticsModel.get(position).getFga();
+                intent.putExtra("fga", fga);
+                String steal = statisticsModel.get(position).getStl();
+                intent.putExtra("steal", steal);
+                String block = statisticsModel.get(position).getBlk();
+                intent.putExtra("block", block);
+                String ftm = statisticsModel.get(position).getFtm();
+                intent.putExtra("ftm", ftm);
+
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+
+            }
+        });
+
     }
 
     @Override
@@ -67,6 +102,7 @@ public class StatisticsAdapter extends RecyclerView.Adapter<StatisticsAdapter.Vi
     public class ViewHolder extends RecyclerView.ViewHolder {
 
         TextView first, last, team, position,home, visitor, score_home, score_visitor, assist, block, dribble, fga, fta, ftm, points, rebound, steal, turnover ;
+        Button button ;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             first=itemView.findViewById(R.id.first_name_st);
@@ -88,6 +124,7 @@ public class StatisticsAdapter extends RecyclerView.Adapter<StatisticsAdapter.Vi
             rebound=itemView.findViewById(R.id.reboundto);
             steal=itemView.findViewById(R.id.steal);
             turnover=itemView.findViewById(R.id.turnover);
+            button =itemView.findViewById(R.id.btn_season_st);
 
         }
     }

@@ -72,6 +72,10 @@
 
     <!--Material color list from https://material.io/guidelines/style/color.html-->
 
+    <color name="cases">#FFA726</color>
+    <color name="recovered">#66BB6A</color>
+    <color name="deaths">#EF5350</color>
+    <color name="active">#29B6F6</color>
     <color name="red_50">#FFEBEE</color>
     <color name="red_100">#FFCDD2</color>
     <color name="red_200">#EF9A9A</color>
@@ -86,7 +90,8 @@
     <color name="red_A200">#FF5252</color>
     <color name="red_A400">#FF1744</color>
     <color name="red_A700">#D50000</color>
-
+    <color name="color_one">#FB7268</color>
+    <color name="color_two">#23403D3D</color>
     <color name="deep_purple_50">#EDE7F6</color>
     <color name="deep_purple_100">#D1C4E9</color>
     <color name="deep_purple_200">#B39DDB</color>

@@ -7,7 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.LinearLayout;
 
-import com.eijun.project.Charts.ChartActivity;
 import com.eijun.project.activities.Gamesctivity;
 import com.eijun.project.activities.PlayerActivity;
 import com.eijun.project.activities.StatisticsActivity;
@@ -31,9 +30,6 @@ public class MainActivity extends AppCompatActivity {
     @BindView(R.id.btn_staats)
     LinearLayout btnStaats;
 
-    @BindView(R.id.btn_any_chart)
-    LinearLayout btnChart;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,7 +39,7 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    @OnClick({R.id.btn_team, R.id.btn_player, R.id.btn_games, R.id.btn_staats, R.id.btn_any_chart})
+    @OnClick({R.id.btn_team, R.id.btn_player, R.id.btn_games, R.id.btn_staats})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.btn_team:
@@ -57,9 +53,6 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.btn_staats:
                 startActivity(new Intent(MainActivity.this, StatisticsActivity.class));
-                break;
-            case R.id.btn_any_chart:
-                startActivity(new Intent(MainActivity.this, ChartActivity.class));
                 break;
 
         }
